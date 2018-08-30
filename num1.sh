@@ -8,3 +8,4 @@ if [ "$num1" -gt 1 ] && [ "$num1" -lt 10 ] && [ "$num2" -gt 1] && [ "$num2" -lt 
 	else
 		echo "$num1 x $num2=$(($num1 * $num2))"
 	fi
+    
