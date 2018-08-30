@@ -1,9 +1,6 @@
 #!/bin/bash
 #Check if Port 22 is up
-if nc -z 172.31.94.19 22 2>/dev/null; 
-then
-#SSH to Allstate-demo
-ssh -i "fullstack.pem" ec2-user@ec2-18-233-97-155.compute-1.amazonaws.com
-	else
-    echo "Port not up"
-fi
+for i in $(cat hosts.sh) ; do nc -z $i 22 ; done
+
+# then do ssh
+for host in $(cat hosts.sh); do ssh -i ~/Downloads/fullstack.pem ec2-user@$host "/sbin/ifconfig"; done
