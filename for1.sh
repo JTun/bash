@@ -5,4 +5,4 @@ for num in $(ls)
 		#let "sum = $sum + $num"
         echo "Myfile" $num
 	done
-echo $sum
+#echo $sum
